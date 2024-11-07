@@ -49,22 +49,17 @@ label{
 
 button {
     padding: 10px 20px;
-    color: white;
+    color: rgb(35, 3, 40);
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
+    background-color: antiquewhite;
 }
 
-.button-1{
-    background-color: #084f03;
-}
-.button-2{
-    background-color: rgb(144, 11, 11);
-}
 
 button:hover {
-    background-color: #6e88a4;
+    background-color: #a7b6c6;
 }
 
 
