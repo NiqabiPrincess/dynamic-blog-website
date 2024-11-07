@@ -1,0 +1,16 @@
+build the homepage
+- make headings
+- add CSS
+- use javascript to load blog posts in a list format 
+
+implement create post functionality
+- create branch
+- create form to make blog posts
+- use javascript to save blog posts
+
+implement view and edit post functionality
+
+implement delete functionality
+
+add responsive styling
+
