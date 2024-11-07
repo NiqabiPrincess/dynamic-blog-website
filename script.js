@@ -7,7 +7,26 @@ postPic = document.getElementById('image');
 
 
 saveButton.addEventListener('click', savePost);
+form.addEventListener ('submit', function(event) {
+    event.preventDefault();
 
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
+    const image = document.getElementById('image').files[0]; // Get the image file
+
+    let imageUrl = '';
+    if (image) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            imageUrl = e.target.result; 
+            savePost(title, content, imageUrl); 
+        };
+        reader.readAsDataURL(image); 
+    } else {
+    
+        savePost(title, content, imageUrl);
+    }
+});
 
 //* Functions to save inputs from new post page
 function saveTitle(){
