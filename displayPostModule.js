@@ -1,11 +1,11 @@
-import { saveTitle, saveContent, savePic, savePost } from "./savePostModule";
+import { saveTitle, saveContent, savePic, savePost } from "./savePostModule.js";
 
 //* to display the blog posts
-function displayPost() {
+export function displayPost() {
     const postsContainer = document.getElementById('posts-container');
     const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];  
 
-    postsContainer.innerHTML = '';
+   postsContainer.innerHTML = '';
 
     posts.forEach(post => {
         const postElement = document.createElement('div');
@@ -23,7 +23,7 @@ function displayPost() {
 }
 
 
-function displayPostTitles() {
+export function displayPostTitles() {
     const postList = document.getElementById('post-list');
     const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
@@ -31,11 +31,7 @@ function displayPostTitles() {
 
     posts.forEach(post => {
         const listItem = document.createElement('li');
-        listItem.textContent = post.title; 
-        listItem.addEventListener('click', () => {
-            window.location.href = `post.html?id=${post.id}`;
-        });
-
-        postList.appendChild(listItem); 
-    });
+        listItem.textContent = post.title;
+        postList.appendChild(listItem);
+    });    
 }
