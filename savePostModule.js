@@ -8,6 +8,13 @@ if (saveButton) {
         savePost();
     }); }
 
+if (form) {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        savePost();
+    });
+}
+
 //* Functions to save inputs from new post page
 export function saveTitle(){
     const postTitle = document.getElementById('title');

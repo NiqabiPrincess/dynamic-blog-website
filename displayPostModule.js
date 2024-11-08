@@ -21,3 +21,21 @@ function displayPost() {
         postsContainer.appendChild(postElement);
     });
 }
+
+
+function displayPostTitles() {
+    const postList = document.getElementById('post-list');
+    const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+    postList.innerHTML = '';
+
+    posts.forEach(post => {
+        const listItem = document.createElement('li');
+        listItem.textContent = post.title; 
+        listItem.addEventListener('click', () => {
+            window.location.href = `post.html?id=${post.id}`;
+        });
+
+        postList.appendChild(listItem); 
+    });
+}
