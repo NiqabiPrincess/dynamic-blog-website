@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header>
+        <h1>Create and Upload a New Blog Post</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Back to Home</a></li>
+                <li><a href="post.html">Read Blog Posts</a></li>
+            </ul>
+        </nav>
+    </header> 
     
-    <h1>Create and Upload a New Blog Post</h1>
+
 
     <form id="post-form">
         <label for="title">Blog Post Title:</label>
@@ -21,10 +31,17 @@
         <label for="image">Image (Optional):</label>
         <input type="file" id="image" name="image"><br><br>
 
-        <button type="submit">Save Post</button>
+        <button type="submit" id="savePost">Save Post</button>
     </form>
 
-    <a href="index.html">Back to Home</a>
+
+
+    <br><br><br><br><br><br><br><br><br><br>
+    
+    <footer>
+        <p>&copy; 2024 Zainab</p>
+    </footer>
+
 
 </body>
 </html>

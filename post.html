@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header>
+        <h1>View the Blog Posts Here!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Back to Home</a></li>
+                <li><a href="new-post.html">Create New Blog Posts</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <h1></h1>
+    
+    <div id="posts-container"></div>
+
+    <br><br><br><br><br>
+
+    <form id="edit-delete-post">
+        <label for="postID">Blog Post ID:</label>
+        <input type="text" id="ID" name="postID" required><br><br>
+
+        <button type="submit" id="deletePost">Delete Post</button>
+        <button type="submit" id="editPost">Edit Post</button>
+    </form>
+
+
+
+
+
+
+
+    <br><br><br><br><br>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Zainab</p>
+    </footer>
+
 
 </body>
 </html>
